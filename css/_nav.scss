@@ -1,0 +1,74 @@
+@import "./_global.scss";
+
+header {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 10vh;
+
+	#header-title {
+		font-size: 2em;
+		text-decoration: none;
+		color: $colorDark;
+		font-weight: bold;
+		margin-left: $defaultPadding;
+	}
+
+	ul {
+		list-style: none;
+		display: flex;
+		margin-right: $defaultPadding;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+		margin-left: $defaultPadding;
+	}
+
+	li a {
+		padding: 5px 20px;
+		text-decoration: none;
+		color: $colorDark;
+		border-bottom: solid 0 $colorDark;
+		transition: border-bottom-width 250ms ease-in-out, transform 250ms ease-in-out;
+	}
+
+	$bottomBorderRadius: 2px;
+
+	.active {
+		border-bottom-width: $bottomBorderRadius;
+	}
+
+	li a:hover {
+		transform: scale(1.125);
+		border-bottom-width: $bottomBorderRadius*2;
+	}
+
+}
+
+main {
+	height: 80vh;
+	background: $colorDark;
+}
+
+
+footer {
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10vh;
+
+	ion-icon {
+		display: block;
+		font-size: 32px;
+		padding: 0 16px;
+		transition: transform 250ms ease-in-out;
+	}
+
+	ion-icon:hover {
+		transform: scale(1.25);
+	}
+}

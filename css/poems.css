@@ -80,37 +80,52 @@ footer ion-icon:hover {
 }
 
 main {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-main #head-shot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-main #main-right {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   background: #202020;
-  color: #d6d6d6;
-}
-main #right-content-container {
-  width: 80%;
-}
-main #main-right #name {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 2em;
-  letter-spacing: 8px;
-}
-main #main-right #bio, main #main-right p {
-  font-size: 1.5em;
-  letter-spacing: 1px;
-}
-main #main-right p {
-  margin-top: 1em;
 }
 
-/*# sourceMappingURL=index.css.map */
+.poems-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.poem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  width: 25%;
+  margin: 40px;
+  border-radius: 20px;
+  transition: transform 250ms ease-in-out;
+  padding: 4px;
+  overflow: hidden;
+}
+.poem .background {
+  width: 100%;
+  height: 100%;
+  filter: blur(6px) brightness(0.5);
+}
+.poem .name {
+  color: #d6d6d6;
+  font-weight: bold;
+  font-size: 2.5em;
+  position: absolute;
+  backdrop-filter: blur(6px);
+}
+
+.poem:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=poems.css.map */
